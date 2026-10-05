@@ -1,0 +1,16 @@
+### Prueba: A03_sql_injection
+### Fecha : 2026-10-04 20:37:30
+### Objetivo: http://localhost:3001
+### Comando: curl -G http://localhost:3001/api/reportes/historico --data-urlencode zona_id=zona-1' OR '1'='1
+---------------------------------------------
+HTTP/1.1 400 Bad Request
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 55
+ETag: W/"37-IpD9/5byeTFApg150Mx8k2xxIrc"
+Date: Sun, 04 Oct 2026 20:37:31 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"error":"zona_id invalido (formato esperado: zona-N)"}
+---------------------------------------------

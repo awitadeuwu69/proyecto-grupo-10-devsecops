@@ -1,0 +1,16 @@
+### Prueba: A01_idor_control_acceso
+### Fecha : 2026-10-04 20:37:30
+### Objetivo: http://localhost:3000
+### Comando: curl -X POST http://localhost:3000/api/riego/zona-1/estado -H Content-Type: application/json -H X-User-Id: agricultor2 -d {"activo": false}
+---------------------------------------------
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 139
+ETag: W/"8b-QXHVSQ/cQeotVr93Z57d6+h4Sg4"
+Date: Sun, 04 Oct 2026 20:37:30 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"mensaje":"Riego de zona-1 actualizado sin validar propietario","zona":{"propietario":"agricultor1","riego_activo":false,"umbral_max":80}}
+---------------------------------------------

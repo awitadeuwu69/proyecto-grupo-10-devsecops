@@ -1,0 +1,13 @@
+{
+  "name": "agrismart-api-vulnerable",
+  "version": "1.0.0",
+  "description": "AgriSmart API - version insegura (fines academicos, Evaluacion 2.4)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  }
+}

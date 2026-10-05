@@ -1,0 +1,16 @@
+### Prueba: A08_xss_estacion
+### Fecha : 2026-10-04 20:37:30
+### Objetivo: http://localhost:3001
+### Comando: curl -X POST http://localhost:3001/api/estaciones -H Content-Type: application/json -d {"nombre": "<script>alert(1)</script>"}
+---------------------------------------------
+HTTP/1.1 400 Bad Request
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+ETag: W/"59-U8/OslLErnz+BH26zLnNS/0LLaQ"
+Date: Sun, 04 Oct 2026 20:37:31 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"error":"nombre invalido: solo letras, numeros, espacios y guiones (max 60 caracteres)"}
+---------------------------------------------

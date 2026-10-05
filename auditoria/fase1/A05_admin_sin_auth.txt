@@ -1,0 +1,16 @@
+### Prueba: A05_admin_sin_auth
+### Fecha : 2026-10-04 20:37:30
+### Objetivo: http://localhost:3000
+### Comando: curl http://localhost:3000/admin/sensores
+---------------------------------------------
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 314
+ETag: W/"13a-k+a76dWgKBuBiusSE7HRLhUISVE"
+Date: Sun, 04 Oct 2026 20:37:30 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"mensaje":"Panel de administracion de sensores (SIN AUTENTICACION)","zonas":{"zona-1":{"propietario":"agricultor1","riego_activo":false,"umbral_max":80},"zona-2":{"propietario":"agricultor2","riego_activo":false,"umbral_max":80}},"estaciones":[{"id":1,"nombre":"Estacion Norte"},{"id":2,"nombre":"Estacion Sur"}]}
+---------------------------------------------
